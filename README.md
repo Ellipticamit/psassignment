@@ -1,13 +1,13 @@
-### Sasta Bazar Assignment
+## Sasta Bazar Assignment
 
-# Run 
+## Run 
 Npm install
 
-# To start server
+## To start server
 npm run server
 
-# For dev environemnt 
+## For dev environemnt 
 nom run dev
 
-# For prod environment
+## For prod environment
 nom run build
