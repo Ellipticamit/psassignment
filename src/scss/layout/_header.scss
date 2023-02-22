@@ -1,0 +1,57 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    &-top {
+        display: none;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &-nav {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+
+    .navigation {
+        display: flex;
+        align-items:center;
+    }
+
+    .menu {
+        display: none;
+        align-items: center;
+        gap: 1.25rem;
+        margin-left: 50px;
+
+    }
+
+    .logo {
+        img {
+            width:180px;
+            height: 60px;
+        }
+    }
+
+    .cart {
+        padding: 10px;
+        background: $grey;
+    }
+
+    @include respond('tablet') {
+        &-top, .menu {
+            display: flex;
+        }
+    }
+
+    @include respond('desktop') {
+        .logo {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+}

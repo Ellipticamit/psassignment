@@ -1,0 +1,14 @@
+@import '../abstract/variables';
+
+footer {
+    padding: 10px;
+    background: $grey;
+    margin-top: 1rem;
+    font-size: 0.75rem;
+
+    .copyright {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

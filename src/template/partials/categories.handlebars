@@ -1,0 +1,18 @@
+<div class="categories">
+    {{#each categories}}
+        {{#if imageUrl}}
+        <div class="category shadow" data-columns="{{@index}}">
+            <div class="left center"> 
+                <h1>{{name}}</h1>
+                <p>{{description}}</p>
+                <button class="btn">
+                    Expore {{key}}
+                </button>
+            </div>
+            <div class="right center">
+                <img src={{imageUrl}} alt={{name}} />
+            </div>
+        </div>
+         {{/if}}
+    {{/each}}
+</div>
