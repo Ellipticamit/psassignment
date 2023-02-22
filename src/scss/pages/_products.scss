@@ -1,10 +1,75 @@
 @import "../abstract/variables";
 
 .products {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &-tablet {
+        flex-direction: row;
+        display: none;
+        padding: 10px 0px;
+    }
+
+    &-sidebar {
+        flex: 1;
+        height: 100%;
+        background-color: $grey;
+    }
+
+    &-main-content {
+        flex: 4;
+    }
+
+    &-list {
+        padding: 10px;
+        border-top: 1px solid black;
+    }
+
     &-header {
         background-color: $primary;
         color: white;
         padding: 15px;
+    }
+
+    &-content {
+        padding: 10px;
+    }
+
+    &-card {
+        margin-bottom: 15px;
+
+        &-content {
+            display: flex;
+            > div {
+                flex: 1;
+            }
+        }
+
+        &-img {
+            display: flex;
+        }
+
+        &-text {
+            padding: 10px;
+        }
+
+    }
+
+    &-description {
+        background-color: $grey;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    @include respond("tablet") {
+        &-mobile {
+            display: none;
+        }
+
+        &-tablet{
+            display: flex;
+        }
     }
 }
 

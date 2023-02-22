@@ -1,16 +1,43 @@
-<div class="products">
+<div class="products products-mobile">
     {{#each products}}
-        <div class="category shadow" data-columns="{{@index}}">
-            <div class="left center"> 
-                <h1>{{name}}</h1>
-                {{!-- <p>{{description}}</p>
-                <button class="btn">
-                    Expore {{key}}
-                </button> --}}
+        <div class="shadow products-section" data-columns="{{@index}}">
+            <div class="products-header space-between">
+                <div>
+                    <span>{{name}}</span>
+                </div>
+                <div>
+                    <i class="arrow down"></i>
+                </div>
             </div>
-            {{!-- <div class="right center">
-                <img src={{imageUrl}} alt={{name}} />
-            </div> --}}
+        </div>
+        <div class="flex flex-column products-content">
+            {{#each data}}
+                <div class="products-card flex flex-column">
+                    <h4>{{name}}</h4>
+                    <div class="products-card-content">
+                        <div class="products-card-img">
+                            <img src={{imageURL}} alt={{description}} />
+                        </div>
+                        <div class="products-card-text flex flex-column">
+                            <p class="products-description">{{description}}</p>
+                            <button class="btn">Buy Now @ MRP {{price}}</span>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
         </div>
     {{/each}}
+</div>
+
+<div class="products products-tablet">
+    <div class="products-sidebar">
+        <ul class="flex flex-column">
+             {{#each products}}
+                <li class="shadow products-list" data-columns="{{@index}}">
+                    <span>{{name}}</span>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="products-main-content">data</div>
 </div>

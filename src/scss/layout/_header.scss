@@ -1,42 +1,15 @@
+@import '../abstract/variables';
+
 .header {
-    display: flex;
-    flex-direction: column;
     &-top {
         display: none;
-        align-items: center;
-        justify-content: flex-end;
+        padding: 5px;
     }
-
-    &-nav {
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-    }
-
-
-    .navigation {
-        display: flex;
-        align-items:center;
-    }
-
     .menu {
         display: none;
         align-items: center;
         gap: 1.25rem;
         margin-left: 50px;
-
-    }
-
-    .logo {
-        img {
-            width:180px;
-            height: 60px;
-        }
-    }
-
-    .cart {
-        padding: 10px;
-        background: $grey;
     }
 
     @include respond('tablet') {
@@ -44,14 +17,38 @@
             display: flex;
         }
     }
+}
 
-    @include respond('desktop') {
-        .logo {
-            img {
-                width: 100%;
-                height: auto;
-            }
+.logo {
+    img {
+        width:180px;
+        height: 60px;
+    }
+}
+
+.cart {
+    padding: 10px;
+    background: $grey;
+    gap: 12px;
+
+    &-icon {
+        img {
+            color: $primary;
+            width: 24px;
+            height: 24px;
         }
     }
 
+    &-items {
+        font-size: 1rem;
+    }
+}
+
+@include respond('desktop') {
+    .logo {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
 }

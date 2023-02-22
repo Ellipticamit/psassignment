@@ -2,14 +2,15 @@ const path = require("path");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const CopyPlugin = require("copy-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 // const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    //entry:  './src/index.js',
     entry: {
         'home': './src/index.js',
-        'products': './src/products.js'
+        'products': './src/products.js',
+        'login': './src/login.js',
+        'register': './src/register.js'
     },
     output: {
         filename: '[name].[contenthash].js',
@@ -80,7 +81,6 @@ module.exports = {
             title: 'Welcome to Sasta Bazar',
             chunks: ['home'],
             template: 'src/template/index.handlebars',
-            templateParameters: require(path.resolve(__dirname, 'src/template/banner.json')),
             description: 'Sasata Bazar description'
         }), 
         new HtmlWebpackPlugin({
@@ -90,6 +90,25 @@ module.exports = {
             template: 'src/template/products.handlebars',
             description: 'Products description'
         }),
+        new HtmlWebpackPlugin({
+            filename: 'login.html',
+            chunks: ['login'],
+            title: 'Login- Sasta Bazar',
+            template: 'src/template/login.handlebars',
+            description: 'Login description'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'register.html',
+            chunks: ['register'],
+            title: 'Register - Sasta Bazar',
+            template: 'src/template/register.handlebars',
+            description: 'Register description'
+        }),
+        new CopyPlugin({
+            patterns: [
+                { from: "static", to: "static"}
+            ]
+        })
     ],
     resolve: {
         fallback: {

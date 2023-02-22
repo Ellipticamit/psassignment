@@ -32,7 +32,6 @@ ul {
 .main {
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
 
@@ -69,6 +68,12 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.space-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @include respond('desktop') {

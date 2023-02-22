@@ -1,22 +1,22 @@
-<header class="header shadow">
-    <section class="container header-top">
+<header class="header flex flex-column shadow">
+    <section class="container flex items-center justify-flex-end">
         <div>
-            <ul class="menu">
+            <ul class="menu items-center">
                 <li class="">
-                    <a href="/login">Signin</a>
+                    <a href="/login.html">Signin</a>
                 </li>
                 <li>
-                    <a href="/register">Singup</a>
+                    <a href="/register.html">Singup</a>
                 </li>
             </ul>
         </div>
     </section>
-    <section class="container header-nav">
-        <div class="navigation">
+    <section class="container flex items-flex-end justify-space-between">
+        <div class="flex items-center justify-space-between">
             <div class="logo">
-                <img src="./images/logo.png" alt="Logo" />
+                <img src="./static/images/logo.png" alt="Logo" />
             </div>
-            <ul class="menu">
+            <ul class="menu items-center">
                 <li class="linkactive">
                     <a href="/">Home</a>
                 </li>
@@ -25,8 +25,11 @@
                 </li>
             </ul>
         </div>
-        <div class="cart">
-            Menu
+        <div class="cart flex items-center">
+            <div class="cart-icon">
+                <img src="./static/images/cart.svg" alt="cart-icon" />
+            </div>
+            <div class="cart-items">0 Items</div>
         </div>  
     </section>
      
